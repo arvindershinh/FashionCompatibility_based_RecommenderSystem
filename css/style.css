@@ -1,0 +1,36 @@
+.highlight {
+  border-radius: 0.4rem;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.bold {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+.blue {
+  background-color: lightcoral;
+}
+.red {
+  background-color: lightblue;
+}
+.recom {
+   color: red;
+}
+.title {
+   color: black;
+   text-align: center;
+   margin-top: -90px;
+}
+.menu {
+    align-content: center;
+    text-align: center;
+}
+.col{
+		background-color : #E5E7E9;
+		color: red;
+		border:2px solid red;
+		height: 100%;
+		padding : 20px 20px 20 px 70px;
+		border-radius: 10 px;
+}
