@@ -81,8 +81,10 @@ def sequence_loss(batch) -> jnp.ndarray:
   logitsB_Flatten = jnp.reshape(logitsB, (-1, logitsB.shape[-1]))
 
   # shape = (S,B,E)
-  batch_Target_F = jnp.pad(batch_Input_F[1:,:,:], pad_width = ((0, 0), (0, 1), (0, 0)))
-  batch_Target_B = jnp.pad(batch_Input_B[1:,:,:], pad_width = ((0, 0), (0, 1), (0, 0)))
+  # batch_Target_F = jnp.pad(batch_Input_F[1:,:,:], pad_width = ((0, 0), (0, 1), (0, 0)))  --> Error (padding at wrong dimension)
+  # batch_Target_B = jnp.pad(batch_Input_B[1:,:,:], pad_width = ((0, 0), (0, 1), (0, 0)))  --> Error (padding at wrong dimension)
+  batch_Target_F = jnp.pad(batch_Input_F[1:,:,:], pad_width = ((0, 1), (0, 0), (0, 0)))
+  batch_Target_B = jnp.pad(batch_Input_B[1:,:,:], pad_width = ((0, 1), (0, 0), (0, 0)))
 
   # shape = (E,S*B)
   batch_Target_F_Flatten = jnp.reshape(batch_Target_F, (batch_Target_F.shape[-1], -1))
