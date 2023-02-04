@@ -14,4 +14,5 @@ semantic embedding.
 + Actively involved in data stories preparation and presentation.
 + Played a pivotal role in deciding ML approach, technology stack and in successful completion of
 project.
-+ Technology Stack - Python, Google JAX, Deepmind Haiku
+
+**Technology Stack** - Python, Google JAX, Deepmind Haiku
